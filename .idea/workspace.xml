@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="589e1041-9a1a-4664-9322-af23e6ba44ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/basics/_02Assertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/localJsonServer/LocalTestDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basics/_01Basics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basics/_01Basics.java" afterDir="false" />
+    <list default="true" id="589e1041-9a1a-4664-9322-af23e6ba44ee" name="Changes" comment="dependsonmethods usage and more practice with jsons">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,10 +168,23 @@
       <workItem from="1727117853024" duration="849000" />
       <workItem from="1727163096397" duration="4974000" />
     </task>
+    <task id="LOCAL-00001" summary="dependsonmethods usage and more practice with jsons">
+      <option name="closed" value="true" />
+      <created>1727206101560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727206101560</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dependsonmethods usage and more practice with jsons" />
+    <option name="LAST_COMMIT_MESSAGE" value="dependsonmethods usage and more practice with jsons" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
