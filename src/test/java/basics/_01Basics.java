@@ -2,11 +2,10 @@ package basics;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import io.restassured.RestAssured;
 
 import java.util.concurrent.TimeUnit;
 
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 public class _01Basics {
 
@@ -48,7 +47,7 @@ public class _01Basics {
                 .then()
                 .statusCode(200)
         ;
-        //Assert.assertEquals(201,url);
+        //Assert.assertEquals(200,url);
     }
 
     @Test
@@ -61,8 +60,41 @@ public class _01Basics {
     }
 
     @Test
-    public void test05_parameters(){
+    public void test05_pathParams() {
+        given()
+                .pathParams("page", 1)
+                .pathParams("link", "api")
+                .get("https://reqres.in/{link}/users?page={page}")
+                .then()
+                .log().body()
+                .statusCode(200)
 
+        ;
     }
 
+    @Test
+    public void test07_baseUri() {
+
+        baseURI = "https://reqres.in";       //baseURL tanimi içindir
+
+        given()
+                .get("https://reqres.in/api/users?page=1")
+                .then()
+                .statusCode(200)
+        ;
+
+        /*
+        baseURI tanimli ise
+        GET, POST, ... 'da http ya da https yoksa baseURI kullanilir
+         */
+
+        given()
+                .get("/api/users?page=1")// kesinlikle kesmeyle başlaması daha iyidir. BEST PRACTICE.
+                .then()
+                .statusCode(200)
+
+        ;
+
+
+    }
 }
