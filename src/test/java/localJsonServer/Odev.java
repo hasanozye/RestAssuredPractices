@@ -43,23 +43,23 @@ public class Odev {
     @Test(priority = 1, dependsOnMethods = "test1")
     public void test2() {
 // tüm username'ler içindeki en uzun username'i yazdıracak.
-        String enUzunDeger = "";
-        List<String> usernameList = given()
+        // Tüm username'ler içindeki en uzun username'i ekrana yazdıracak
+        List<String> list = given()
                 .when()
                 .get("/users")
-                .then()
+                .then().
+                log().all()
                 .statusCode(200)
                 .extract().path("username");
-
-
-        for (String s : usernameList) {
-            if (s.length()>enUzunDeger.length()){
-                enUzunDeger = s;
+        System.out.println("Usernames : " + list);
+        String maxLength = list.get(0);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) != null && list.get(i).length() > maxLength.length()) {
+                maxLength = list.get(i);
             }
-        }
 
-        System.out.println(usernameList);
-        System.out.println(enUzunDeger);
+        }
+        System.out.println(maxLength);
 
     }
 }
