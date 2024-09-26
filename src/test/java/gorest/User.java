@@ -9,6 +9,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class User {
+    int id;
     String name;
     String email;
     String gender;
