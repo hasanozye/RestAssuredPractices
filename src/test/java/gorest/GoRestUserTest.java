@@ -10,6 +10,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import static io.restassured.RestAssured.*;
@@ -48,7 +50,8 @@ public class GoRestUserTest {
 
     @Test(testName = "createUser")
     public void test1_CreateUser() {
-        String json = getJsonData();
+        //String json = getJsonData();
+        Map<String, String> json = getMapData();
 
 
         Response response = given()
@@ -88,7 +91,7 @@ public class GoRestUserTest {
         System.out.println(response.jsonPath().get("name").toString());
     }
 
-    @Test(dependsOnMethods = "test1_CreateUser")
+    @Test(dependsOnMethods = "test1_CreateUser", priority = 1)
     public void test3_deleteUser() {
         given()
                 .spec(reqSpec)
@@ -96,7 +99,7 @@ public class GoRestUserTest {
                 .delete("/public/v2/users/" + id)
                 .then()
                 .log().body()
-                .statusCode(oneOf(200,204,201));
+                .statusCode(oneOf(200, 204, 201));
 
 
     }
@@ -121,5 +124,28 @@ public class GoRestUserTest {
 
         return jsonReel;
     }
+
+    public static Map<String, String> getMapData() {
+        String[] genders = {"male", "female"};
+        String[] statuses = {"active", "inactive"};
+
+        String name = RandomStringUtils.randomAlphabetic(5, 10);
+        String email = RandomStringUtils.randomAlphabetic(5, 10) + "@mail.com";
+        String gender = genders[new Random().nextInt(genders.length)];
+        String status = statuses[new Random().nextInt(statuses.length)];
+
+        Map<String, String> data = new HashMap<>();
+        data.put("name", name);
+        data.put("email", email);
+        data.put("gender", gender);
+        data.put("status", status);
+
+        return data;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("getMapData() = " + getMapData());
+    }
+
 
 }
