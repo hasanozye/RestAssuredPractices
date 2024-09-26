@@ -116,5 +116,26 @@ public class Gorest {
         ;
     }
 
+    @Test
+    public void getAUser() {
+        get("https://gorest.co.in/public/v2/users/6940849")
+                .then()
+                .statusCode(200)
+                .log().body()
+
+        ;
+    }
+
+    @Test
+    public void getAUserInAClass() {
+        User user = get("https://gorest.co.in/public/v2/users/6940849")
+                .then()
+                .statusCode(200)
+                //.log().body()
+                .extract().as(User.class);
+        System.out.println(user);
+        System.out.println(user.getName());
+        System.out.println(user.getEmail());
+    }
 
 }
