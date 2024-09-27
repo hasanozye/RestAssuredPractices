@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="589e1041-9a1a-4664-9322-af23e6ba44ee" name="Changes" comment="dependsonmethods usage and more practice with jsons">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="589e1041-9a1a-4664-9322-af23e6ba44ee" name="Changes" comment="POJO and response shananigans">
+      <change afterPath="$PROJECT_DIR$/src/test/java/zippo/Zippo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/zippoTask/TurkeyDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/zippoTask/ZippoGetAllTR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gorest/Gorest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gorest/Gorest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,39 +38,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/e 15/IdeaProjects/RestAssuredPracticeProject&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/e 15/IdeaProjects/CucumberFramework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.LocalTestDB.test01_getAllPosts">
-    <configuration name="LocalTestDB.test01_getAllPosts" type="TestNG" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\e 15\IdeaProjects\RestAssuredPracticeProject\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.ZippoGetAllTR.getZipCodesInRange">
+    <configuration name="Rest2.getUserInClass" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredPracticeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="localJsonServer.*" />
+          <option name="PATTERN" value="gorest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="localJsonServer" />
-      <option name="MAIN_CLASS_NAME" value="localJsonServer.LocalTestDB" />
-      <option name="METHOD_NAME" value="test01_getAllPosts" />
+      <option name="PACKAGE_NAME" value="gorest" />
+      <option name="MAIN_CLASS_NAME" value="gorest.Rest2" />
+      <option name="METHOD_NAME" value="getUserInClass" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -73,17 +84,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_01Basics.test05_pathParams" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ZippoGetAllTR.getOneZipCode" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredPracticeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="basics.*" />
+          <option name="PATTERN" value="zippoTask.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="basics" />
-      <option name="MAIN_CLASS_NAME" value="basics._01Basics" />
-      <option name="METHOD_NAME" value="test05_pathParams" />
+      <option name="PACKAGE_NAME" value="zippoTask" />
+      <option name="MAIN_CLASS_NAME" value="zippoTask.ZippoGetAllTR" />
+      <option name="METHOD_NAME" value="getOneZipCode" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,17 +102,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_01Basics.test07_baseUri" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ZippoGetAllTR.getZipCodesInRange" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredPracticeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="basics.*" />
+          <option name="PATTERN" value="zippoTask.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="basics" />
-      <option name="MAIN_CLASS_NAME" value="basics._01Basics" />
-      <option name="METHOD_NAME" value="test07_baseUri" />
+      <option name="PACKAGE_NAME" value="zippoTask" />
+      <option name="MAIN_CLASS_NAME" value="zippoTask.ZippoGetAllTR" />
+      <option name="METHOD_NAME" value="getZipCodesInRange" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,17 +120,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_02Assertions.test01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Zippo.test1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredPracticeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="basics.*" />
+          <option name="PATTERN" value="zippo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="basics" />
-      <option name="MAIN_CLASS_NAME" value="basics._02Assertions" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="zippo" />
+      <option name="MAIN_CLASS_NAME" value="zippo.Zippo" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,17 +138,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_02Assertions.test02_dataProvider" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Zippo.test2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssuredPracticeProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="basics.*" />
+          <option name="PATTERN" value="zippo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="basics" />
-      <option name="MAIN_CLASS_NAME" value="basics._02Assertions" />
-      <option name="METHOD_NAME" value="test02_dataProvider" />
+      <option name="PACKAGE_NAME" value="zippo" />
+      <option name="MAIN_CLASS_NAME" value="zippo.Zippo" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -145,13 +156,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.Rest2.getUserInClass" />
+      <item itemvalue="TestNG.ZippoGetAllTR.getOneZipCode" />
+      <item itemvalue="TestNG.ZippoGetAllTR.getZipCodesInRange" />
+      <item itemvalue="TestNG.Zippo.test1" />
+      <item itemvalue="TestNG.Zippo.test2" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LocalTestDB.test01_getAllPosts" />
-        <item itemvalue="TestNG._02Assertions.test02_dataProvider" />
-        <item itemvalue="TestNG._02Assertions.test01" />
-        <item itemvalue="TestNG._01Basics.test07_baseUri" />
-        <item itemvalue="TestNG._01Basics.test05_pathParams" />
+        <item itemvalue="TestNG.ZippoGetAllTR.getZipCodesInRange" />
+        <item itemvalue="TestNG.ZippoGetAllTR.getOneZipCode" />
+        <item itemvalue="TestNG.Rest2.getUserInClass" />
+        <item itemvalue="TestNG.Zippo.test2" />
+        <item itemvalue="TestNG.Zippo.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -167,6 +185,10 @@
       <workItem from="1727117251919" duration="594000" />
       <workItem from="1727117853024" duration="849000" />
       <workItem from="1727163096397" duration="4974000" />
+      <workItem from="1727249142369" duration="10461000" />
+      <workItem from="1727333948035" duration="3740000" />
+      <workItem from="1727347098281" duration="3141000" />
+      <workItem from="1727359335561" duration="2443000" />
     </task>
     <task id="LOCAL-00001" summary="dependsonmethods usage and more practice with jsons">
       <option name="closed" value="true" />
@@ -176,15 +198,52 @@
       <option name="project" value="LOCAL" />
       <updated>1727206101560</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gitignore updated">
+      <option name="closed" value="true" />
+      <created>1727206621792</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727206621792</updated>
+    </task>
+    <task id="LOCAL-00003" summary="go rest page further practices with 4 methods using Response Interface">
+      <option name="closed" value="true" />
+      <created>1727273936215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727273936215</updated>
+    </task>
+    <task id="LOCAL-00004" summary="improved the logic">
+      <option name="closed" value="true" />
+      <created>1727273947274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727273947274</updated>
+    </task>
+    <task id="LOCAL-00005" summary="POJO and response shananigans">
+      <option name="closed" value="true" />
+      <created>1727349110884</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727349110884</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="dependsonmethods usage and more practice with jsons" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependsonmethods usage and more practice with jsons" />
+    <MESSAGE value="gitignore updated" />
+    <MESSAGE value="go rest page further practices with 4 methods using Response Interface" />
+    <MESSAGE value="improved the logic" />
+    <MESSAGE value="POJO and response shananigans" />
+    <option name="LAST_COMMIT_MESSAGE" value="POJO and response shananigans" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

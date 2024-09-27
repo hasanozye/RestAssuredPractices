@@ -118,7 +118,7 @@ public class Gorest {
 
     @Test
     public void getAUser() {
-        get("https://gorest.co.in/public/v2/users/6940849")
+        get("https://gorest.co.in/public/v2/users/6940853")
                 .then()
                 .statusCode(200)
                 .log().body()
@@ -128,7 +128,7 @@ public class Gorest {
 
     @Test
     public void getAUserInAClass() {
-        User user = get("https://gorest.co.in/public/v2/users/6940849")
+        User user = get("https://gorest.co.in/public/v2/users/6940853")
                 .then()
                 .statusCode(200)
                 //.log().body()
