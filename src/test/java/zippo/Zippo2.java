@@ -1,6 +1,8 @@
 package zippo;
 
+import io.restassured.RestAssured;
 import io.restassured.filter.log.LogDetail;
+import io.restassured.response.ValidatableResponse;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
@@ -12,7 +14,11 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.Test;
+import zippo.pojoClasses.Location;
+import zippo.pojoClasses.Place;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -30,9 +36,11 @@ public class Zippo2 {
 
     @BeforeClass
     public void beforeClass() {
+        RestAssured.baseURI = "https://api.zippopotam.us";
+
         requestSpecification = new RequestSpecBuilder()
-                .setBaseUri("https://api.zippopotam.us/")
-                //.setBasePath("/TR/")
+                .setBaseUri("https://api.zippopotam.us")
+//                .setBasePath("/TR/")
                 .log(LogDetail.URI)
                 .build();
 
@@ -153,6 +161,77 @@ public class Zippo2 {
                 .extract().jsonPath().get("places[2].'place name'");
         Assert.assertEquals(placeName, "Sokullu Mah.");
     }
+
+    @Test
+    public void test5_getDataExtractPlaceName() {
+        Response response1 = given()
+                .spec(requestSpecification)
+                .when()
+                .get("/TR/06080")
+                .then()
+                .spec(responseSpecification)
+                .extract().response();
+
+//        List<String> places = response1.then().extract().path("places.'place name'");
+        List<String> places = response1.then().extract().jsonPath().getList("places.'place name'");
+
+
+        Assert.assertEquals(18, places.size());
+    }
+
+    @Test
+    public void test6_getDataToPojo() {
+        Response response = given()
+                .spec(requestSpecification)
+                .when()
+                .get("/TR/06080")
+                .then()
+                .spec(responseSpecification)
+                .extract().response();
+
+        Location location = response.then().extract().as(Location.class);
+        System.out.println(location);
+        //System.out.println(location.getPlaces());
+        //System.out.println(location.getPlaces().get(0).getPlaceName());
+
+    }
+
+
+    @Test
+    public void test7_getDataToPojo() throws IOException {
+        FileWriter fileWriter = new FileWriter("Places.txt");
+        for (int i = 6070; i < 6090; i++) {
+            String postCode = getPostaKodu(i);
+            Response response = given()
+                    .spec(requestSpecification)
+                    .pathParams("postaKodu", postCode)
+                    .when()
+                    .get("/TR/{postaKodu}")
+                    .then()
+                    .extract().response();
+            Location location = response.then().extract().as(Location.class);
+            if (location.getPlaces() != null) {
+                for (Place place : location.getPlaces()) {
+                    String str = location.getCountry() + "\t" +
+                            place.getState() + "\t" +
+                            place.getPlaceName() + "\n";
+
+                    fileWriter.write(str);
+                }
+            }
+        }
+        fileWriter.close();
+    }
+
+    public String getPostaKodu(int num) {
+        String code = String.valueOf(num);
+
+        for (int i = code.length(); i < 5; i++) {
+            code = "0".concat(code);
+        }
+        return code;
+    }
+
 
     public static void main(String args[]) {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2, 4, 6));
